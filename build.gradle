@@ -36,6 +36,12 @@ flyway {
 	locations = ['filesystem:src/main/flyway']
 }
 
+flywayClean {
+	if (project.gradle.startParameter.taskNames.contains('flywayClean')) {
+		throw new RuntimeException('This ENV. does not support flywayClean.')
+	}
+}
+
 dependencies {
 	compile('org.springframework.boot:spring-boot-starter-data-jpa')
 	compile('org.springframework.boot:spring-boot-starter-web')
