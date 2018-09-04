@@ -23,7 +23,7 @@
 
     <appender name="logstash" class="net.logstash.logback.appender.LogstashTcpSocketAppender">
         <param name="Encoding" value="UTF-8"/>
-        <destination>211.49.172.81:4567</destination>
+        <destination>211.49.172.81:5000</destination>
         <keepAliveDuration>5 minutes</keepAliveDuration>
         <!-- encoder is required -->
         <encoder class="net.logstash.logback.encoder.LogstashEncoder">
